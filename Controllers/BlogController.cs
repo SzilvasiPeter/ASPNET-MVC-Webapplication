@@ -10,7 +10,12 @@ namespace WebApplication.Controllers
     public class BlogController : ControllerBase
     {
         private IBlogService myService;
-        
+
+        public BlogController(IBlogService myService)
+        {
+            this.myService = myService;
+        }
+
         [HttpGet("/api/blogs")]
         public ActionResult<List<Blog>> GetProducts()
         {
