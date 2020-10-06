@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using WebApplication.Models;
+using WebApplication.Services;
 
 namespace WebApplication.Controllers
 {
@@ -25,6 +26,13 @@ namespace WebApplication.Controllers
 
         public IActionResult Privacy()
         {
+            return View();
+        }
+        
+        public IActionResult Blog()
+        {
+            BlogController blogController = new BlogController(new BlogService());
+            var blogs = blogController.GetBlogs();
             return View();
         }
 

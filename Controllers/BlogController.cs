@@ -17,27 +17,27 @@ namespace WebApplication.Controllers
         }
 
         [HttpGet("/api/blogs")]
-        public ActionResult<List<Blog>> GetProducts()
+        public ActionResult<List<Blog>> GetBlogs()
         {
             return myService.GetAllBlogs();
         }
 
         [HttpPost("/api/blogs")]
-        public ActionResult<Blog> AddProduct(Blog blog)
+        public ActionResult<Blog> AddBlog(Blog blog)
         {
             myService.AddBlog(blog);
             return blog;
         }
 
         [HttpPut("/api/blogs/{id}")]
-        public ActionResult<Blog> UpdateProduct(int id, Blog blog)
+        public ActionResult<Blog> UpdateBlog(int id, Blog blog)
         {
             myService.UpdateBlog(id, blog);
             return blog;
         }
 
         [HttpDelete("/api/blogs/{id}")]
-        public ActionResult<int> DeleteProduct(int id)
+        public ActionResult<int> DeleteBlog(int id)
         {
             myService.DeleteBlog(id);
             return id;
