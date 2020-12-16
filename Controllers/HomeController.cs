@@ -36,7 +36,7 @@ namespace WebApplication.Controllers
             return View();
         }
 
-        public IActionResult Blog()
+        public IActionResult User()
         {
             UserController userController = new UserController(new UserService());
             var users = userController.GetUsers();
