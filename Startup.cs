@@ -26,6 +26,7 @@ namespace WebApplication
         {
             services.AddControllersWithViews();
             services.AddSingleton<IBlogService, BlogService>();
+            services.AddSingleton<IUserService, UserService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
