@@ -36,11 +36,11 @@ namespace WebApplication.Controllers
             return View();
         }
 
-        public IActionResult User()
+        public IActionResult UserResult()
         {
             UserController userController = new UserController(new UserService());
             var users = userController.GetUsers();
-            return View();
+            return View("UserResult");
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
